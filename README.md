@@ -59,9 +59,9 @@ Endpoints:
 
 ### TO DO
 
-[x] - Create CRUD endpoints for Users
-[ ] - Write middleware for Users endpoints (validate user id, etc.)
-[ ] - Add tables for handling graph data
-[ ] - Write endpoints for graphs
-[ ] - Wire up authentication middleware
-[ ] - Write tests
+- [x] - Create CRUD endpoints for Users
+- [ ] - Write middleware for Users endpoints (validate user id, etc.)
+- [ ] - Add tables for handling graph data
+- [ ] - Write endpoints for graphs
+- [ ] - Wire up authentication middleware
+- [ ] - Write tests
