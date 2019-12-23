@@ -55,13 +55,70 @@ Endpoints:
     "message": "The user was successfully deleted"
 }
 ```
+### POST to /api/graphs
 
+- Send the request with the following format. Note that all fields are required.
+
+```
+{
+	"graph_name": "test",
+	"dataset": [1,2,3,4],
+	"user_id": "1"
+}
+```
+
+- The database will return a JSON object with the following structure:
+
+```
+{
+    "id": 2,
+    "graph_name": "test",
+    "dataset": [
+        1,
+        2,
+        3,
+        4
+    ],
+    "user_id": 1
+}
+```
+
+### GET to /api/graphs/:id
+
+- Will return a JSON object with the following structure:
+
+```
+{
+    "id": 2,
+    "graph_name": "test",
+    "dataset": [
+        1,
+        2,
+        3
+    ],
+    "user_id": 1
+}
+```
+
+### PUT to /api/graphs/:id
+
+- Send request with desired changes. Server will return a JSON object with all of the graph information. The changes will be reflected in the fields that were updated.
+
+### DELETE to /api/graphs/:id
+
+- Send request to delete graph. If the request was successful the server will send the following response:
+
+```
+{
+    "message": "The graph was successfully deleted"
+}
+```
 
 ### TO DO
 
 - [x] - Create CRUD endpoints for Users
 - [ ] - Write middleware for Users endpoints (validate user id, etc.)
-- [ ] - Add tables for handling graph data
-- [ ] - Write endpoints for graphs
+- [x] - Add tables for handling graph data
+- [x] - Write endpoints for graphs
 - [ ] - Wire up authentication middleware
 - [ ] - Write tests

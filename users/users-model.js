@@ -17,6 +17,7 @@ function findById(id) {
         .where({ id })
         .first();
 }
+
 async function updateUser(id, changes) {
     await db('users')
         .where({ id })
