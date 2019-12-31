@@ -12,20 +12,11 @@ Summary of Endpoints:
 | POST  | /api/auth/login  | Login user  |
 | GET  | /api/users/:id  | Get a specific user  |
 | PUT   | /api/users/:id  | Update a specific user  |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| DELETE  | /api/users/:id  | Delete a specific user   |
+| POST  | /api/graphs  | Add a graph  |
+| GET  | /api/graphs/:id  | Retrieve a specific graph   |
+| PUT  | /api/graphs/:id   | Update a specific graph  |
+| DELETE  | /api/graphs/:id   | Delete a specific graph  |
 |   |   |   |
 
 Endpoint Details:
