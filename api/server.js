@@ -7,6 +7,8 @@ const authRouter = require('../auth/auth-router.js');
 const usersRouter = require('../users/users-router.js');
 const graphsRouter = require('../graphs/graphs-router.js');
 
+const authenticate = require('../auth/authenticate-middleware.js');
+
 const server = express();
 
 server.use(cors());

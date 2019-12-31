@@ -9,7 +9,7 @@ describe('server.js', () => {
                 { 
                     name: "test",
                     username: "test",
-                    email: "test@test.com",
+                    email: "test77@test.com",
                     password: "password"
                 }
             const res = await request(server).post('/api/auth/register').send(user);
@@ -17,8 +17,15 @@ describe('server.js', () => {
         })
 
         beforeEach(async () => {
-            await db("users").truncate();
-            await db("graphs").truncate();
+            await db.raw('TRUNCATE TABLE users RESTART IDENTITY CASCADE');
           });
+    })
+
+    describe('POST /login', () => {
+        it('should return 200 OK.', async () => {
+            const user = {username: "test", password: "password"}
+            const res = await request(server).post('/api/auth/login').send(user);
+            expect(res.status).toBe(200);
+        })
     })
 })

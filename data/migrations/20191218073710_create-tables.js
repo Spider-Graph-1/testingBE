@@ -12,7 +12,7 @@ exports.up = function(knex) {
         .createTable('graphs', tbl => {
           tbl.increments();
           tbl.string('graph_name', 255).notNullable();
-          tbl.specificType('dataset', 'integer[]').notNullable();
+          tbl.jsonb('graph_info').notNullable();
           tbl
             .integer('user_id')
             .unsigned()
