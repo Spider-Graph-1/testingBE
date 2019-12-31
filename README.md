@@ -4,7 +4,31 @@ Heroku link:
 
 https://spidergraph-backend.herokuapp.com/
 
-Endpoints:
+Summary of Endpoints:
+
+| Type | Route  | Description   |
+|---|---|---|
+| POST  | /api/auth/register   | Register user  |
+| POST  | /api/auth/login  | Login user  |
+| GET  | /api/users/:id  | Get a specific user  |
+| PUT   | /api/users/:id  | Update a specific user  |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+Endpoint Details:
 
 ### POST to /api/auth/register
 
@@ -122,3 +146,4 @@ Endpoints:
 - [x] - Write endpoints for graphs
 - [ ] - Wire up authentication middleware
 - [ ] - Write tests
+- [ ] - Set up test database for development
