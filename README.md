@@ -135,6 +135,6 @@ Endpoint Details:
 - [ ] - Write middleware for Users endpoints (validate user id, etc.)
 - [x] - Add tables for handling graph data
 - [x] - Write endpoints for graphs
-- [ ] - Wire up authentication middleware
+- [x] - Wire up authentication middleware
 - [ ] - Write tests
 - [ ] - Set up test database for development

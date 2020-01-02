@@ -15,8 +15,8 @@ server.use(cors());
 server.use(express.json());
 
 server.use('/api/auth', authRouter);
-server.use('/api/users', usersRouter);
-server.use('/api/graphs', graphsRouter);
+server.use('/api/users', authenticate, usersRouter);
+server.use('/api/graphs', authenticate, graphsRouter);
 
 server.get('/', (req, res) => {
     res.send('<h1>Spider Graph</h1>')
