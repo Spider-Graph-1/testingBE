@@ -104,14 +104,20 @@ Endpoint Details:
 
 ```
 {
-    "id": 2,
-    "graph_name": "test",
-    "dataset": [
-        1,
-        2,
-        3
-    ],
-    "user_id": 1
+	"graph_name": "project graph 1",
+	"graph_info": {
+		"labels": ['Axis1', 'Axis2', 'Axis3'],
+		"datasets": [
+	        {
+	          label: 'Dataset1',
+	          borderDash: [0, 0],
+	          backgroundColor: '#fff',
+	          data: [25, 14, 22],
+	        },
+    			],
+			title: 'Graph1'
+		}),
+	"user_id": "1"
 }
 ```
 
