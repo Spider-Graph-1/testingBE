@@ -11,9 +11,21 @@ router.post('/', (req, res) => {
             res.status(201).json(newGraph)
         })
         .catch((err) => {
-            res.status(500).json({message: "There was an error adding the graph to the database."})
+            res.status(500).json({message: "There was an error adding the graph to the database.", err})
         })
 });
+
+router.get('/', (req, res) => {
+    const {id} = req.params;
+
+    Graphs.getAllUserGraphs(id)
+        .then((graphs) => {
+            res.status(200).json(graphs)
+        })
+        .catch((err) => {
+            res.status(500).json({message: 'There was an error retrieving the graphs', err})
+        })
+})
 
 router.get('/:id', (req, res) => {
     const {id} = req.params;

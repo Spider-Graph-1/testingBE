@@ -13,6 +13,7 @@ exports.up = function(knex) {
           tbl.increments();
           tbl.string('graph_name', 255).notNullable();
           tbl.jsonb('graph_info').notNullable();
+          tbl.string('image', 255)
           tbl
             .integer('user_id')
             .unsigned()

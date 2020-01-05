@@ -8,7 +8,7 @@ router.get('/:id', (req, res) => {
 
     Users.findById(id)
         .then((user) => {
-            res.status(200).json(user);
+            res.status(200).json(user, user.id);
         })
         .catch(() => {
             res.status(500).json({ message: 'There was an error retrieving the user from the database.'})
