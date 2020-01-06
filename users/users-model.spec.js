@@ -29,4 +29,18 @@ describe('users model', () => {
             await db.raw('TRUNCATE TABLE users RESTART IDENTITY CASCADE');
         })
     })
+
+    describe('update', () => {
+        it('should update an existing user', async () => {
+            await Users.updateUser(1, {
+                    name: "test",
+                    username: "test",
+                    email: "testupdated@test.com",
+                    password: "password"
+            })
+
+            const users = await db('users');
+            expect(users).toHaveLength(1);
+        })
+    })
 })

@@ -194,5 +194,5 @@ Sample response:
 - [x] - Add tables for handling graph data
 - [x] - Write endpoints for graphs
 - [x] - Wire up authentication middleware
-- [ ] - Write tests
-- [ ] - Set up test database for development
+- [ ] - Get tests to pass.
+- [ ] - Set up test database for testing
