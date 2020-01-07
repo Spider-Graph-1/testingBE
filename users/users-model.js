@@ -1,5 +1,9 @@
 const db = require('../data/db-config.js');
 
+ function find() {
+    return db('users')
+}
+
 async function add(user) {
     const [id] = await db('users')
         .returning('id')
@@ -39,6 +43,7 @@ async function deleteUser(id) {
 
 module.exports = {
     add,
+    find,
     findBy,
     findById,
     updateUser,

@@ -20,7 +20,8 @@ router.post('/register', (req, res) => {
             const token = generateToken(newUser);
             res.status(201).json({created_user: newUser, token: token, id: newUser.id})
         })
-        .catch(() => {
+        .catch(error => {
+            console.log(error)
             res.status(500).json({message: "There was an error adding a user to the database."})
         })
 });

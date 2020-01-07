@@ -3,12 +3,26 @@ const router = express.Router();
 
 const Users = require('./users-model.js');
 
+
+router.get('/', (req,res) => {
+    Users.find()
+    .then((users) => {
+        res.status(200).json(users)
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(500).json({message: "There was an error retrieving users"})
+    })
+})
+
+
+
 router.get('/:id', (req, res) => {
     const {id} = req.params;
 
     Users.findById(id)
         .then((user) => {
-            res.status(200).json(user, user.id);
+            res.status(200).json(user);
         })
         .catch(() => {
             res.status(500).json({ message: 'There was an error retrieving the user from the database.'})
