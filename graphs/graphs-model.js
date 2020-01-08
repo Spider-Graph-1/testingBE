@@ -1,5 +1,10 @@
 const db = require('../data/db-config.js');
 
+function getAll() => {
+    return db.('graphs');
+}
+
+
 async function add(graph) {
     const [id] = await db('graphs')
         .returning('id')
