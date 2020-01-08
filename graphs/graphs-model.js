@@ -1,6 +1,6 @@
 const db = require('../data/db-config.js');
 
-function getAll() => {
+function getAll() {
     return db.('graphs');
 }
 
