@@ -12,7 +12,7 @@ Graphs.getAll()
     console.log(error)
     res.status(500).json({message: "error getting graphs"})
    })
-}
+});
 
 router.post('/', (req, res) => {
     const graph = req.body;
