@@ -1,7 +1,7 @@
 const db = require('../data/db-config.js');
 
 function getAll() {
-    return db.('graphs');
+    return db('graphs');
 }
 
 
