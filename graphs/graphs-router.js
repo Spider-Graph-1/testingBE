@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
             res.status(201).json(newGraph)
         })
         .catch((err) => {
+        console.log(err)
             res.status(500).json({message: "There was an error adding the graph to the database.", err})
         })
 });
