@@ -10,7 +10,7 @@ Graphs.getAll()
 })
     .catch(error => {
     console.log(error)
-    res.status(500).json({message: "error getting graphs")
+    res.status(500).json({message: "error getting graphs"})
    })
 }
 
