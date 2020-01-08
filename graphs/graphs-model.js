@@ -44,6 +44,7 @@ async function deleteGraph(id) {
 
 module.exports = {
     add,
+    getAll,
     findById,
     getAllUserGraphs,
     updateGraph,
