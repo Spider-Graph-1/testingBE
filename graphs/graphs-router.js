@@ -3,6 +3,17 @@ const router = express.Router();
 
 const Graphs = require('./graphs-model.js');
 
+router.get("/", (req, res) => {
+Graphs.getAll()
+    .then(graphs => {
+    res.status(200).json(graphs)
+})
+    .catch(error => {
+    console.log(error)
+    res.status(500).json({message: "error getting graphs")
+   })
+}
+
 router.post('/', (req, res) => {
     const graph = req.body;
 
